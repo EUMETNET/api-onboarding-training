@@ -30,3 +30,73 @@ Want to benefit from improved security, efficiency, manageability, and cost-effe
 * use your own API / file hostings and adverise direct links to data
 * add discovery metadata to WIS 2
 * add notifications to WIS 2 (that point directly to your service)
+
+## Exercise
+1. create file in the config folder in this repository called yourinstitute.yaml
+2. configure your excisting API to MeteoGate API Gateway
+    * any API is ok (WMS, EDR, openapi anything goes)
+    * choose rate limit (optional)
+    * choose to allow anonymous and / or registered users access
+    * set upstream api authentication (between MeteoGate API GW and your API)
+    * set CORS header
+4. push your changes to repository 
+
+### Example 1. no limits
+```
+id: fi <-- create id 
+version: 1.0.0
+platforms: 
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: fi/edr <-- choose route
+      endpoint: https://opendata.fmi.fi/edr <-- set you API endpoint
+      cors: true
+```
+
+### Example 2. rate limits
+```
+id: fi--ratelimit
+version: 1.0.0
+platforms: 
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: fi/ratelimit/edr
+      endpoint: https://opendata.fmi.fi/edr
+      ratelimitAuth:
+        requestRate:
+          rate: 10
+          burst: 20
+        quota:
+          count: 100
+          time_window: 300
+      ratelimitAnon:
+        requestRate:
+          rate: 1
+          burst: 5
+        quota:
+          count: 50
+          time_window: 300
+      cors: true
+```
+
+### Example 3. upstream requires authentication
+```
+id: dk
+version: 1.0.0
+platforms: 
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: dk/edr
+      endpoint: https://dmigw.govcloud.dk/v1/forecastedr
+      cors: true
+      apikey:
+        headerParam: 'X-Gravitee-Api-Key'
+        secretName: DMIAPIKEY
+```
+

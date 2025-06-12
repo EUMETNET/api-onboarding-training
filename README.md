@@ -39,7 +39,11 @@ Want to benefit from improved security, efficiency, manageability, and cost-effe
     * choose to allow anonymous and / or registered users access
     * set upstream api authentication (between MeteoGate API GW and your API)
     * set CORS header
-4. push your changes to repository 
+4. push your changes to repository
+5. message mikko, that you are done, wait for deployment
+6. test your api trough MeteoGate API gateway at https://api.meteogate.eu/youroute
+7. test registered access by registering your own apikey at https://devportal.meteogate.eu/
+8. test your api with apikey at https://api.meteogate.eu/youroute?apikey=yourapikey (or put apikey in the header of the request)
 
 ### Example 1. no limits
 ```

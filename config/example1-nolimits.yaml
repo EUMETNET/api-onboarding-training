@@ -1,0 +1,10 @@
+id: fi
+version: 1.0.0
+platforms: 
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: fi/edr
+      endpoint: https://opendata.fmi.fi/edr
+      cors: true

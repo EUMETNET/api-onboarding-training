@@ -1,0 +1,13 @@
+id: dk
+version: 1.0.0
+platforms: 
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: dk/edr
+      endpoint: https://dmigw.govcloud.dk/v1/forecastedr
+      cors: true
+      apikey:
+        headerParam: 'X-Gravitee-Api-Key'
+        secretName: DMIAPIKEY

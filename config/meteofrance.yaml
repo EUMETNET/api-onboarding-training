@@ -1,0 +1,10 @@
+id: fr
+version: 1.0.0
+platforms:
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: fr/test
+      endpoint: https://caddy.opimail.org/caddy/
+      cors: true

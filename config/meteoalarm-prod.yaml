@@ -1,0 +1,27 @@
+id: warnings
+version: 1.0.0
+platforms: 
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: warnings/edr
+      endpoint: https://api.meteoalarm.eu/edr/v1/
+      apikey:
+        headerParam: 'Authorization'
+        secretName: METEOALARM_PROD_API_KEY
+      ratelimitAuth:
+        requestRate:
+          rate: 10
+          burst: 20
+        quota:
+          count: 100
+          time_window: 300
+      ratelimitAnon:
+        requestRate:
+          rate: 0
+          burst: 0
+        quota:
+          count: 0
+          time_window: 300
+      cors: true

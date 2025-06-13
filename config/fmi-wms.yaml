@@ -1,0 +1,10 @@
+id: fi-openwms
+version: 1.0.0
+platforms: 
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: fi/openwms
+      endpoint: http://openwms.fmi.fi/geoserver/wms
+      cors: true

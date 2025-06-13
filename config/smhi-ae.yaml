@@ -1,0 +1,10 @@
+id: se
+version: 1.0.0
+platforms: 
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: se/no-edr
+      endpoint: https://opendata-download-metobs.smhi.se
+      cors: true

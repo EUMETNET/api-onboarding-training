@@ -1,4 +1,4 @@
-id: fi-openwms
+id: fi-wms
 version: 1.0.0
 platforms: 
   - EUMETSAT

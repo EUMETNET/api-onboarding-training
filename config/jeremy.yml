@@ -5,9 +5,9 @@ platforms:
   - ECMWF
 routes:
   - route:
-      id: jeremy/edr <-- choose route
+      id: jeremy/edr
       endpoint: https://api.dataplatform.knmi.nl/edr/v1
       cors: true
       apikey:
         headerParam: 'authorization'
-        secretName: eyJvcmciOiI1ZTU1NGUxOTI3NGE5NjAwMDEyYTNlYjEiLCJpZCI6IjAwZGZlMDY4ZTk4MjRkZjY4Njg5ODVkMDhlZWY4ZDMwIiwiaCI6Im11cm11cjEyOCJ9
+        secretName: KNMIKEY

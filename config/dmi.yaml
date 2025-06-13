@@ -1,0 +1,24 @@
+id: dk--ratelimit
+version: 1.0.0
+platforms: 
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: dk/ratelimit/metobs_feature
+      endpoint: https://meteogate_metobs.dmi.govcloud.dk/v2/metObs
+      ratelimitAuth:
+        requestRate:
+          rate: 10
+          burst: 20
+        quota:
+          count: 100
+          time_window: 300
+      ratelimitAnon:
+        requestRate:
+          rate: 1
+          burst: 5
+        quota:
+          count: 50
+          time_window: 300
+      cors: true

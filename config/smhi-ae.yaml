@@ -6,5 +6,5 @@ platforms:
 routes:
   - route:
       id: se/no-edr
-      endpoint: https://opendata-download-metobs.smhi.se/api.json
+      endpoint: https://opendata-download-metobs.smhi.se
       cors: true

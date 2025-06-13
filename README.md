@@ -1,4 +1,4 @@
-# Steps to publish data trough MeteoGate
+# Steps to publish data through MeteoGate
 https://eumetnet.github.io/meteogate-documentation/3-publishing-data/
 There are 3 patterns to publis data. Today we concentrate on pattern 2 MeteoGate API Gateway.
 

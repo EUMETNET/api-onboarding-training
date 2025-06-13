@@ -10,4 +10,4 @@ routes:
       cors: true
       apikey:
         headerParam: 'authorization'
-        secretName: KNMIKEY
+        secretName: KNMIAPIKEY

@@ -6,7 +6,7 @@ platforms:
 routes:
   - route:
       id: dk/ratelimit/metobs_feature
-      endpoint: https://meteogate_metobs.dmi.govcloud.dk/v2/metObs
+      endpoint: https://meteogate-metobs.dmi.govcloud.dk/v2/metObs/
       ratelimitAuth:
         requestRate:
           rate: 10

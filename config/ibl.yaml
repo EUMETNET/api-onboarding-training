@@ -1,0 +1,10 @@
+id: fi
+version: 1.0.0
+platforms: 
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: ibl/swimedr
+      endpoint: https://swim.iblsoft.com/edr
+      cors: true

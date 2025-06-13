@@ -1,0 +1,13 @@
+id: jeremy 
+version: 1.0.0
+platforms: 
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: jeremy/edr
+      endpoint: https://api.dataplatform.knmi.nl/edr/v1
+      cors: true
+      apikey:
+        headerParam: 'authorization'
+        secretName: KNMIAPIKEY

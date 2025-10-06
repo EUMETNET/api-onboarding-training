@@ -1,0 +1,10 @@
+id: lu
+version: 1.0.0
+platforms:
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: lu/hvd
+      endpoint: https://metapi.ana.lu/api/v1/docs#/hvd
+      cors: true

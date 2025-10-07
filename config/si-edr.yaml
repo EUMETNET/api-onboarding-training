@@ -1,0 +1,24 @@
+id: si-edr
+version: 0.1.0
+platforms: 
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: si/edr
+      endpoint: https://apis-g.arso.gov.si/edr
+      ratelimitAuth:
+        requestRate:
+          rate: 10
+          burst: 20
+        quota:
+          count: 100
+          time_window: 300
+      ratelimitAnon:
+        requestRate:
+          rate: 1
+          burst: 5
+        quota:
+          count: 50
+          time_window: 300
+      cors: true

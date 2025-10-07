@@ -1,0 +1,10 @@
+id: esoh
+version: 1.0.0
+platforms: 
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: esoh/edr
+      endpoint: https://observations.meteogate.eu/
+      cors: true

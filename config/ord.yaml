@@ -1,0 +1,24 @@
+id: ord
+version: 1.0.0
+platforms: 
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: ord/edr
+      endpoint: https://radar.meteogate.eu/api
+      ratelimitAuth:
+        requestRate:
+          rate: 10
+          burst: 20
+        quota:
+          count: 100
+          time_window: 60
+      ratelimitAnon:
+        requestRate:
+          rate: 2
+          burst: 5
+        quota:
+          count: 30
+          time_window: 60
+      cors: true

@@ -51,7 +51,7 @@ The following sections contain the requirements for your API and detailed steps 
 3. Fill in your API details to the configuration file
     * Any API is ok (WMS, EDR, openapi)
     * For `id` and `route.id` follow the _naming convention_
-       * <country code>-<organization>-<API type / name>-<additional information> where _additional information_ is optional and all other mandatory
+       * `<country code>-<organization>-<API type/name>-<additional information>` where _additional information_ is optional and all other mandatory
        * e.g. `fi-fmi-edr`, `fi-fmi-timeseries`, `eu-eumetnet-surface-observations`, `fi-fmi-wms-forecast`
        * The `id` will be the route postfix used to access through MeteoGate e.g. `https://api.meteogate.eu/eu-eumetnet-surface-observations`
     * Choose rate limits to users (optional)

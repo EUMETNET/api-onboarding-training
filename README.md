@@ -65,7 +65,7 @@ The following sections contain the requirements for your API and detailed steps 
 4. Save the config file
 5. Contact Meteogate service desk through [contact form](https://ilmatieteenlaitos.atlassian.net/jira/core/form/83953b5d-a13d-4a66-bb40-7fdfd1a1f2a4)
     * In the message provide the `configuration` as a _code snippet_ which is accessible by pressing the `+` in the description field
-    * If your API requires upstream API authentication provide the `API-KEY` in the message as a _code snippet_
+    * If your API requires upstream API authentication provide the `API-KEY` in the message as a separate _code snippet_
     * If accessing your API requires _whitelisting_ of *ip block* please state that in the message
 6. Wait for someobdy from the MeteoGate team to contact you
 7. When the onboarding process is complete

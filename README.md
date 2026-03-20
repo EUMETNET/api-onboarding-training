@@ -1,5 +1,5 @@
 # Steps to Publish Data Through MeteoGate
-There are 3 patterns to publish data through Meteogate with more datails found in the [documentation](https://eumetnet.github.io/meteogate-documentation/3-publishing-data/)  
+There are 3 patterns to publish data through Meteogate with more details found in the [documentation](https://eumetnet.github.io/meteogate-documentation/3-publishing-data/)  
  
  Instructions in this repository concentrate on publishing Pattern 2: Managed and Proxied Access Through MeteoGate API Gateway.
 
@@ -67,9 +67,9 @@ The following sections contain the requirements for your API and detailed steps 
     * In the message provide the `configuration` as a _code snippet_ which is accessible by pressing the `+` in the description field
     * If your API requires upstream API authentication provide the `API-KEY` in the message as a separate _code snippet_
     * If accessing your API requires _whitelisting_ of *ip block* please state that in the message
-6. Wait for someobdy from the MeteoGate team to contact you
+6. Wait for somebody from the MeteoGate team to contact you
 7. When the onboarding process is complete
-    * Test your api trough MeteoGate API gateway at `https://api.meteogate.eu/<route_id>`
+    * Test your api through MeteoGate API gateway at `https://api.meteogate.eu/<route_id>`
     * Test registered access by registering your own apikey at https://devportal.meteogate.eu/
     * Test your api with apikey at `https://api.meteogate.eu/<route_id>?apikey=yourapikey` (or put apikey in the header of the request)
 
@@ -164,7 +164,7 @@ routes:
           time_window: 3600
       apikey:
         headerParam: 'Authorization'
-        secretName: FI-FMI-EDR-APIKEY
+        secretName: FI-FMI-EDR-KEY
       cors: true
 ```
 

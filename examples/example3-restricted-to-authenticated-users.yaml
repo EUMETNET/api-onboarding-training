@@ -1,0 +1,18 @@
+id: fi-fmi-edr
+version: 1.0.0
+platforms: 
+  - EUMETSAT
+  - ECMWF
+routes:
+  - route:
+      id: fi-fmi-edr
+      endpoint: https://opendata.fmi.fi/edr
+      apikeyOnly: true
+      ratelimitAuth:
+        requestRate:
+          rate: 60
+          burst: 100
+        quota:
+          count: 500
+          time_window: 3600
+      cors: true
